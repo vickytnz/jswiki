@@ -44,6 +44,16 @@
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
  		console.log(data);
+ 		 $.each(data.response.venue.query.pages, function (index, value) {
+
+	        // Get the items
+	        var items = this.items; // Here 'this' points to a 'group' in 'groups'
+
+	        // Iterate through items.
+	        $.each(items, function () {
+	            console.log(this.text); // Here 'this' points to an 'item' in 'items'
+	        });
+    });
         },
         error: function (errorMessage) {
         }
