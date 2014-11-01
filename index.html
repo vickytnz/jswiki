@@ -44,17 +44,6 @@
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
  		console.log(data);
- 		var obj = jQuery.parseJSON(data); 
- 		for (var i = 0; i < data.length; i++) {
-    var object = data[i];
-    for (var property in object) {
-        alert('item ' + i + ': ' + property + '=' + object[property]);
-    }
-    // If property names are known beforehand, you can also just do e.g.
-     alert(object.canonicalurl + ',' + object.title);
-}
- 		/*var markup = obj["pages"];
-            var blurb = $('<div></div>').html(markup);*/
         },
         error: function (errorMessage) {
         }
