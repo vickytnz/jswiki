@@ -41,7 +41,7 @@
 	    url: "http://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=calvino&format=json&gsrprop=snippet&prop=info&inprop=url&continue=",
 	    contentType: "application/json; charset=utf-8",
 	    async: false,
-	    dataType: "json",
+	    dataType: "jsonp",
 	    success: function (data, textStatus, jqXHR) {
 	    
 		var markup = data.parse.text["*"];
