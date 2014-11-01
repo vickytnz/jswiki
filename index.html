@@ -44,7 +44,8 @@
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
  		console.log(data);
- 
+ 		var markup = data.parse.api.query.pages;
+            var blurb = $('<div></div>').html(markup);
         },
         error: function (errorMessage) {
         }
